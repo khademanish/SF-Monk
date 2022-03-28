@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="EMP API" icon-name="custom:custom2">
+        <lightning-card>
+            <p class="slds-p-horizontal_medium">Data received  : {receivedData}</p><br/>
+            <lightning-input label="Channel Name" value={channelName} onchange={handleChannelName}></lightning-input><br/>
+            <lightning-button
+                    variant="success"
+                    label="Subscribe"
+                    title="Subscribe"
+                    onclick={handleSubscribe}
+                    disabled={isSubscribeDisabled}
+                    class="slds-m-left_x-small"
+                ></lightning-button>
+                <lightning-button
+                    variant="destructive"
+                    label="Unsubscribe"
+                    title="Unsubscribe"
+                    onclick={handleUnsubscribe}
+                    disabled={isUnsubscribeDisabled}
+                    class="slds-m-left_x-small"
+                ></lightning-button>
+        </lightning-card>
+    </lightning-card>
+</template>
